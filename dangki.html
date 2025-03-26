@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Đăng Ký BLOGGER</title>
+  <!-- Link tới file CSS -->
+  <link rel="stylesheet" href="dangki.css">
+  <!-- Sử dụng Google Font Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1 class="logo">BLOGGER</h1>
+    <p class="subtitle">Tạo tài khoản mới</p>
+    <p class="quote">Hãy tạo nên các khoảng khắc thú vị nào !</p>
+    <form action="#" method="post">
+      <input type="text" name="firstName" placeholder="Họ" required>
+      <input type="text" name="lastName" placeholder="Tên" required>
+      
+      <div class="dob-container">
+        <label for="dob-day">Ngày sinh:</label>
+        <div class="dob-selectors">
+          <select name="day" id="dob-day" required>
+            <option value="">Ngày</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+          </select>
+          <select name="month" id="dob-month" required>
+            <option value="">Tháng</option>
+            <option value="1">Tháng 1</option>
+            <option value="2">Tháng 2</option>
+            <option value="3">Tháng 3</option>
+            <option value="4">Tháng 4</option>
+            <option value="5">Tháng 5</option>
+            <option value="6">Tháng 6</option>
+            <option value="7">Tháng 7</option>
+            <option value="8">Tháng 8</option>
+            <option value="9">Tháng 9</option>
+            <option value="10">Tháng 10</option>
+            <option value="11">Tháng 11</option>
+            <option value="12">Tháng 12</option>
+          </select>
+          <input type="text" name="year" placeholder="Năm" required>
+        </div>
+      </div>
+      
+      <div class="radio-group">
+        <label>
+          <input type="radio" name="gender" value="Nam" required> Nam
+        </label>
+        <label>
+          <input type="radio" name="gender" value="Nữ" required> Nữ
+        </label>
+      </div>
+      
+      <input type="email" name="contact" placeholder="Email hoặc số điện thoại" required>
+      <input type="password" name="password" placeholder="Mật khẩu mới" required>
+      
+      <button type="submit">Đăng ký</button>
+    </form>
+  </div>
+
+  <!-- Link tới file JavaScript -->
+  <script src="dangki.js"></script>
+</body>
+</html>
