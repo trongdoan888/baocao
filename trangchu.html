@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <!-- Meta viewport để responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLOGGER - Trang Chủ</title>
+  <link rel="stylesheet" href="trangchu.css">
+</head>
+<body>
+  <!-- Header với thanh điều hướng -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">BLOGGER</div>
+
+      <nav class="nav" style="">
+        <a href="#home">Trang Chủ</a>
+        <a href="#about">Giới Thiệu</a>
+        <a href="#login">Đăng Nhập</a>
+        <a href="#contact">Liên Hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Phần Hero -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Chào mừng đến với BLOGGER</h1>
+      <p>Nơi chia sẻ những ý tưởng và cảm hứng sống động.</p>
+      <a href="#login" class="btn">Đăng nhập ngay</a>
+    </div>
+  </section>
+
+  <!-- Phần Đăng nhập -->
+  <section id="login" class="login-section">
+    <div class="container login-container">
+      <div class="login-form">
+        <h2>Đăng Nhập</h2>
+        <form id="loginForm">
+          <input type="text" placeholder="Email hoặc số điện thoại">
+          <input type="password" placeholder="Mật khẩu">
+          <div id="errorMsg" class="error-message"></div>
+          <button type="submit" class="login-btn">Đăng nhập</button>
+          <a href="#">Quên tài khoản?</a>
+          <a href="dangki.html" class="signup-btn" style="color:white">Tạo tài khoản mới</a>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Phần Giới Thiệu -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>Giới Thiệu</h2>
+      <p>
+        Chúng tôi tạo ra không gian sáng tạo cho những người đam mê chia sẻ kinh nghiệm và cảm hứng. 
+        BLOGGER là nơi bạn có thể tìm thấy những câu chuyện thú vị và những ý tưởng đột phá.
+      </p>
+    </div>
+  </section>
+  
+
+  <!-- Phần Liên Hệ -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Liên Hệ</h2>
+      <p>Email: contact@blogger.com</p>
+      <p>Hotline: 0123 456 789</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 BLOGGER. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="trangchu.js"></script>
+</body>
+</html>
