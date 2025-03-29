@@ -18,8 +18,8 @@ body {
 
 /* Container dùng chung */
 .container {
-  width: 90%;
-  max-width: 1200px;
+  width: 100%;
+  max-width: 90%;
   margin: 0 auto;
 }
 
