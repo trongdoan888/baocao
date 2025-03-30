@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard với Sidebar Có Thể Gạt Sang</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Thêm Font Awesome cho icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="CSS.css">
+</head>
+<body>
+  <!-- Sidebar Navigation -->
+  <div class="sidebar" id="sidebar">
+    <h2>Điều Hướng</h2>
+    <div class="nav-item">
+      <i class="fas fa-home"></i>
+      <span>Trang chủ</span>
+    </div>
+    <div class="nav-item">
+      <i class="fas fa-info-circle"></i>
+      <span>Giới thiệu</span>
+    </div>
+    <div class="nav-item">
+      <i class="fas fa-cogs"></i>
+      <span>Cài đặt</span>
+    </div>
+    <div class="nav-item">
+      <i class="fas fa-envelope"></i>
+      <span>Liên hệ</span>
+    </div>
+  </div>
+
+  <!-- Nút Toggle hiện/ẩn sidebar -->
+  <div class="toggle-btn" id="toggle-btn">
+    <i class="fas fa-chevron-right"></i>
+  </div>
+
+  <!-- Nội dung chính -->
+  <div class="main-content">
+    <h1 style="margin-bottom:20px; color:#fff;">Dashboard Nội Dung</h1>
+    <div class="grid-container">
+      <!-- Ví dụ các card -->
+      <div class="card">
+        <h3>Thanh bên (Trên cùng)</h3>
+        <div class="item">
+          <i class="fas fa-plus"></i>
+          <div class="text">Thêm tiện ích</div>
+        </div>
+        <div class="item">
+          <i class="fas fa-info-circle"></i>
+          <div class="text">Giới thiệu về tôi</div>
+          <i class="fas fa-pen edit"></i>
+        </div>
+      </div>
+      
+      <div class="card">
+        <h3>Thanh bên (Dưới cùng)</h3>
+        <div class="item">
+          <i class="fas fa-plus"></i>
+          <div class="text">Thêm tiện ích</div>
+        </div>
+        <div class="item">
+          <i class="fas fa-archive"></i>
+          <div class="text">Lưu trữ Blog</div>
+          <i class="fas fa-pen edit"></i>
+        </div>
+        <div class="item">
+          <i class="fas fa-envelope"></i>
+          <div class="text">Nhãn</div>
+          <i class="fas fa-pen edit"></i>
+        </div>
+        <div class="item">
+          <i class="fas fa-flag"></i>
+          <div class="text">Báo cáo vi phạm</div>
+          <i class="fas fa-pen edit"></i>
+        </div>
+      </div>
+      
+      <div class="card">
+        <h3>Search (Top)</h3>
+        <div class="item">
+          <i class="fas fa-search"></i>
+          <div class="text">Tìm kiếm Blog này</div>
+          <i class="fas fa-pen edit"></i>
+        </div>
+      </div>
+      
+      <div class="card">
+        <h3>Tiêu đề</h3>
+        <div class="item">
+          <i class="fas fa-heading"></i>
+          <div class="text">Anh Quan Handsome (Tiêu đề)</div>
+          <i class="fas fa-pen edit"></i>
+        </div>
+      </div>
+      
+      <div class="card">
+        <h3>Danh sách Trang</h3>
+        <div class="item">
+          <i class="fas fa-list"></i>
+          <div class="text">Trang</div>
+          <i class="fas fa-pen edit"></i>
+        </div>
+      </div>
+      
+      <div class="card">
+        <h3>Quảng cáo</h3>
+        <div class="item">
+          <i class="fas fa-ad"></i>
+          <div class="text">AdSense</div>
+          <i class="fas fa-pen edit"></i>
+        </div>
+        <div class="item">
+          <i class="fas fa-ad"></i>
+          <div class="text">AdSense</div>
+          <i class="fas fa-pen edit"></i>
+        </div>
+      </div>
+      
+      <div class="card">
+        <h3>Phần chính của trang</h3>
+        <div class="item">
+          <i class="fas fa-star"></i>
+          <div class="text">Bài đăng nổi bật</div>
+          <i class="fas fa-pen edit"></i>
+        </div>
+        <div class="item">
+          <i class="fas fa-blog"></i>
+          <div class="text">Bài đăng trên Blog</div>
+          <i class="fas fa-pen edit"></i>
+        </div>
+        <div class="item">
+          <i class="fas fa-fire"></i>
+          <div class="text">Bài đăng phổ biến</div>
+          <i class="fas fa-pen edit"></i>
+        </div>
+      </div>
+      
+      <div class="card">
+        <h3>Chân trang</h3>
+        <div class="item">
+          <i class="fas fa-cogs"></i>
+          <div class="text">Thuộc tính</div>
+          <i class="fas fa-pen edit"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js.js"></script>
+</body>
+</html>

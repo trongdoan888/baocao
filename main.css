@@ -38,11 +38,11 @@ body {
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Đẩy logo trái, menu phải */
+  justify-content: space-between; 
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 40px;
   font-weight: bold;
   color: white;
 }
@@ -50,7 +50,6 @@ body {
 .nav {
   display: flex;
   gap: 20px;
-  margin-left: auto; /* Đẩy menu sát phải */
   justify-content: flex-end;
 }
 
