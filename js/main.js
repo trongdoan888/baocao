@@ -37,8 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Giả lập đăng nhập thành công (ở đây bạn có thể kiểm tra tài khoản thật nếu cần)
         alert('Đăng nhập thành công!');
         
-        // Chuyển hướng đến trang "dangbai.html"
-        window.location.href = 'dangbai.html';
+        // Chuyển hướng đến trang post
+        window.location.href = 'post.html';
       }
     });
   }
