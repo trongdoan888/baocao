@@ -6,186 +6,238 @@
     <title>Profile Page</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
-    <link href="profile.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="CSS.css">
 </head>
 <body>
     <div class="container">
         <!-- Cover Photo -->
         <div class="cover-photo">
-            <img alt="Cover photo" src="https://storage.googleapis.com/a1aa/image/9R_ihd1U9WgeTonPXR-KpbTi1bq8xmpQeUJu-BFK9yQ.jpg"/>
+            <img alt="Cover photo" src="https://via.placeholder.com/1000x300/808080/808080?text="/>
         </div>
+        
         <!-- Profile Photo -->
-        <img alt="Profile photo" class="profile-photo" src="https://storage.googleapis.com/a1aa/image/PbuY03r-KeDocXwxfdwVAxfacBrcl5XhBXXSvNzNVX4.jpg"/>
+        <img alt="Profile photo" class="profile-photo" src="https://via.placeholder.com/168/cccccc/808080?text="/>
         
         <!-- Profile Information -->
         <div class="profile-info">
             <h1>Nguyen Anh Quan</h1>
-            <p>226 người bạn</p>
-            <div class="friends">
-                <img alt="Friend 1" src="https://storage.googleapis.com/a1aa/image/5F6uqTZTp350MnQDppup3etUjT9FE5IHVuxNuOHkny8.jpg"/>
-                <img alt="Friend 2" src="https://storage.googleapis.com/a1aa/image/J5r9E7jMCwVJ1RfSv9jQAodKxwL6UQbCV2YOfdnx_Pc.jpg"/>
-                <img alt="Friend 3" src="https://storage.googleapis.com/a1aa/image/zhVZ4xb-3BaL3qBbkX6NHIfmG9u_iIWBCrIxGC2bkbU.jpg"/>
-                <img alt="Friend 4" src="https://storage.googleapis.com/a1aa/image/eQix76xFcJ2Im_JUAYQA2isi_4n6V9QZKFGU3qGc1L0.jpg"/>
-                <img alt="Friend 5" src="https://storage.googleapis.com/a1aa/image/OJsPV3OP9HBl3hcpquw429ckI7FOV7zPeKsdbYNEwr8.jpg"/>
-                <span>...</span>
-            </div>
+            <p>... người bạn</p>
             <div class="profile-actions">
-                <button>+ Thêm vào tin</button>
+                <button class="add-to-story">+ Thêm vào tin</button>
                 <button class="edit">Chỉnh sửa trang cá nhân</button>
             </div>
         </div>
         
-        <!-- Navigation Tabs -->
-        <div class="nav-tabs">
-            <a class="active" href="#">Giới thiệu</a>
-
-
-        </div>
-        
-        <!-- Nội dung hai cột -->
+        <!-- Main Content -->
         <div class="content">
-            <!-- Sidebar -->
-            <div class="sidebar">
-                <div class="sidebar-header" id="sidebarToggle">
+            <div class="intro-section">
+                <div class="intro-header">
                     <h2>Giới thiệu</h2>
-                    <i class="fas fa-chevron-down toggle-arrow"></i>
+                    <button class="edit-intro"><i class="fas fa-pencil-alt"></i> Chỉnh sửa</button>
                 </div>
-                <ul class="sidebar-list">
-                    <li>Tổng quan</li>
-                    <li>Công việc và học vấn</li>
-                    <li>Nơi từng sống</li>
-                    <li>Thông tin liên hệ cơ bản</li>
-                    <li>Gia đình và các mối quan hệ</li>
-                    <li>Chi tiết về bạn</li>
-                    <li>Sự kiện trong đời</li>
-                </ul>
-            </div>
-            <!-- Main Content -->
-            <div class="main-content">
-                <!-- Các mục "Thêm" -->
-                <div class="info-item add" id="addWorkBtn">
-                    <i class="fas fa-briefcase"></i> Thêm nơi làm việc
-                </div>
-                <div class="info-item add" id="addHighSchoolBtn">
-                    <i class="fas fa-graduation-cap"></i> Thêm trường trung học
-                </div>
-                <div class="info-item add" id="addCollegeBtn">
-                    <i class="fas fa-graduation-cap"></i> Thêm trường cao đẳng/đại học
-                </div>
-                <div class="info-item default">
-                    <i class="fas fa-home"></i> Sống tại Hà Nội
-                </div>
-                <div class="info-item default">
-                    <i class="fas fa-map-marker-alt"></i> Đến từ Vinh Ninh, Ha Noi, Vietnam
-                </div>
-                <div class="info-item default">
-                    <i class="fas fa-heart"></i> Độc thân
-                </div>
-                <div class="info-item default">
-                    <i class="fas fa-phone"></i> 038 251 2638
+                <div class="intro-content">
+                    <div class="intro-item">
+                        <i class="fas fa-info-circle"></i>
+                        <div>
+                            <h4>Tổng quan</h4>
+                            <p>Thêm thông tin giới thiệu về bạn</p>
+                        </div>
+                    </div>
+                    <div class="intro-item">
+                        <i class="fas fa-briefcase"></i>
+                        <div>
+                            <h4>Công việc và học vấn</h4>
+                            <p>Thêm nơi làm việc và học vấn</p>
+                        </div>
+                    </div>
+                    <div class="intro-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Nơi từng sống</h4>
+                            <p>Thêm thành phố hiện tại và quê quán</p>
+                        </div>
+                    </div>
+                    <div class="intro-item">
+                        <i class="fas fa-address-book"></i>
+                        <div>
+                            <h4>Thông tin liên hệ</h4>
+                            <p>Thêm số điện thoại và email</p>
+                        </div>
+                    </div>
+                    <div class="intro-item">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <h4>Gia đình</h4>
+                            <p>Thêm thông tin gia đình</p>
+                        </div>
+                    </div>
+                    <div class="intro-item">
+                        <i class="fas fa-heart"></i>
+                        <div>
+                            <h4>Mối quan hệ</h4>
+                            <p>Thêm tình trạng quan hệ</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
-    <!-- Modal cho "Thêm nơi làm việc" -->
+
+    <!-- Edit Options Modal -->
+    <div id="editOptionsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Chỉnh sửa trang cá nhân</h2>
+                <span class="modal-close" id="closeEditOptionsModal">×</span>
+            </div>
+            <div class="modal-body">
+                <ul class="edit-options-list">
+                    <li class="edit-option" data-modal="cityModal">
+                        <i class="fas fa-city"></i>
+                        <span>Chọn thành phố</span>
+                    </li>
+                    <li class="edit-option" data-modal="hometownModal">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Chọn quê quán</span>
+                    </li>
+                    <li class="edit-option" data-modal="workModal">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Thêm nơi làm việc</span>
+                    </li>
+                    <li class="edit-option" data-modal="highSchoolModal">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Thêm trường trung học</span>
+                    </li>
+                    <li class="edit-option" data-modal="collegeModal">
+                        <i class="fas fa-university"></i>
+                        <span>Thêm trường đại học</span>
+                    </li>
+                    <li class="edit-option" data-modal="relationshipModal">
+                        <i class="fas fa-heart"></i>
+                        <span>Nhập tình trạng quan hệ</span>
+                    </li>
+                    <li class="edit-option" data-modal="phoneModal">
+                        <i class="fas fa-phone"></i>
+                        <span>Nhập số điện thoại</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- City Modal -->
+    <div id="cityModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Chọn thành phố</h2>
+                <span class="modal-close" id="closeCityModal">×</span>
+            </div>
+            <div class="modal-body">
+                <label for="cityInput">Tỉnh/Thành phố hiện tại</label>
+                <input type="text" id="cityInput" placeholder="Nhập tên thành phố..." required>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-cancel" id="cancelCityModal">Hủy</button>
+                <button class="btn-save" id="saveCity">Lưu</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hometown Modal -->
+    <div id="hometownModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Chọn quê quán</h2>
+                <span class="modal-close" id="closeHometownModal">×</span>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="hometownInput" placeholder="Nhập quê quán..." required>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-cancel" id="cancelHometownModal">Hủy</button>
+                <button class="btn-save" id="saveHometown">Lưu</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Work Modal -->
     <div id="workModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
                 <h2>Thêm nơi làm việc</h2>
-                <span class="modal-close" id="closeModal">&times;</span>
+                <span class="modal-close" id="closeWorkModal">×</span>
             </div>
             <div class="modal-body">
                 <form id="workForm">
-                    <label for="company">Công ty</label>
-                    <input type="text" id="company" name="company" placeholder="Nhập tên công ty" required>
-                    
-                    <label for="position">Chức vụ</label>
-                    <input type="text" id="position" name="position" placeholder="Nhập chức vụ" required>
-                    
-                    <label for="city">Thành phố/Thị xã</label>
-                    <input type="text" id="city" name="city" placeholder="Nhập tên thành phố hoặc thị xã" required>
-                    
-                    <label for="startYear">Năm bắt đầu</label>
-                    <select id="startYear" name="startYear" required>
-                        <option value="">Chọn năm</option>
-                        <option value="2023">2023</option>
-                        <option value="2022">2022</option>
-                        <option value="2021">2021</option>
-                        <option value="2020">2020</option>
-                        <option value="2019">2019</option>
-                        <option value="2018">2018</option>
-                    </select>
-                    
-                    <label for="workDuration">Khoảng thời gian làm việc</label>
-                    <input type="text" id="workDuration" name="workDuration" placeholder="Nhập khoảng thời gian làm việc" required>
-                    
-                    <label for="description">Mô tả</label>
-                    <textarea id="description" name="description" rows="3" placeholder="Mô tả công việc"></textarea>
-                    
+                    <div class="form-group">
+                        <label for="company">Công ty</label>
+                        <input type="text" id="company" name="company" placeholder="Nhập tên công ty" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="position">Chức vụ</label>
+                        <input type="text" id="position" name="position" placeholder="Nhập chức vụ" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="workCity">Thành phố/Thị xã</label>
+                        <input type="text" id="workCity" name="workCity" placeholder="Nhập tên thành phố hoặc thị xã" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="workStartYear">Năm bắt đầu</label>
+                        <select id="workStartYear" name="workStartYear" required>
+                            <option value="">Chọn năm</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="workEndYear">Năm kết thúc</label>
+                        <select id="workEndYear" name="workEndYear">
+                            <option value="">Chọn năm</option>
+                        </select>
+                    </div>
                     <div class="checkbox-container">
                         <input type="checkbox" id="currentWork" name="currentWork">
                         <label for="currentWork">Hiện tại làm việc ở đây</label>
                     </div>
+                    <div class="form-group">
+                        <label for="workDescription">Mô tả</label>
+                        <textarea id="workDescription" name="workDescription" rows="3" placeholder="Mô tả công việc"></textarea>
+                    </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button class="btn-cancel" id="cancelModal">Hủy</button>
+                <button class="btn-cancel" id="cancelWorkModal">Hủy</button>
                 <button class="btn-save" id="saveWork">Lưu</button>
             </div>
         </div>
     </div>
 
-    <!-- Modal cho thêm trường trung học -->
+    <!-- High School Modal -->
     <div id="highSchoolModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
                 <h2>Thêm trường trung học</h2>
-                <span class="modal-close" id="closeHighSchoolModal">&times;</span>
+                <span class="modal-close" id="closeHighSchoolModal">×</span>
             </div>
             <div class="modal-body">
                 <form id="highSchoolForm">
-                    <label for="highSchoolName">Tên trường</label>
-                    <input type="text" id="highSchoolName" name="highSchoolName" placeholder="Nhập tên trường" required>
-                    
-                    <div class="time-period">
+                    <div class="form-group">
+                        <label for="highSchoolName">Tên trường</label>
+                        <input type="text" id="highSchoolName" name="highSchoolName" placeholder="Nhập tên trường" required>
+                    </div>
+                    <div class="form-group">
                         <label>Khoảng thời gian</label>
                         <div style="display: flex; align-items: center; gap: 10px;">
                             <select id="highSchoolStartYear" name="highSchoolStartYear" required>
                                 <option value="">Năm</option>
-                                <option value="2023">2023</option>
-                                <option value="2022">2022</option>
-                                <option value="2021">2021</option>
-                                <option value="2020">2020</option>
-                                <option value="2019">2019</option>
-                                <option value="2018">2018</option>
                             </select>
                             <span>→</span>
                             <select id="highSchoolEndYear" name="highSchoolEndYear" required>
                                 <option value="">Năm</option>
-                                <option value="2023">2023</option>
-                                <option value="2022">2022</option>
-                                <option value="2021">2021</option>
-                                <option value="2020">2020</option>
-                                <option value="2019">2019</option>
-                                <option value="2018">2018</option>
                             </select>
-                            <span>→</span>
                         </div>
                     </div>
-
                     <div class="checkbox-container">
                         <input type="checkbox" id="highSchoolGraduated" name="highSchoolGraduated">
                         <label for="highSchoolGraduated">✅ Đã tốt nghiệp</label>
-                    </div>
-
-                    <label for="highSchoolDescription">Mô tả</label>
-                    <textarea id="highSchoolDescription" name="highSchoolDescription" rows="3" placeholder="Mô tả quá trình học tập"></textarea>
-
-                    <label>Đã học</label>
-                    <div class="checkbox-container">
-                        <input type="checkbox" id="highSchoolCheckbox" name="highSchoolCheckbox" checked>
-                        <label for="highSchoolCheckbox">Trung học</label>
                     </div>
                 </form>
             </div>
@@ -196,47 +248,35 @@
         </div>
     </div>
 
-    <!-- Modal cho thêm trường cao đẳng/đại học -->
+    <!-- College Modal -->
     <div id="collegeModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
                 <h2>Thêm thông tin giáo dục</h2>
-                <span class="modal-close" id="closeCollegeModal">&times;</span>
+                <span class="modal-close" id="closeCollegeModal">×</span>
             </div>
             <div class="modal-body">
                 <form id="collegeForm">
-                    <label for="collegeName">Tên trường</label>
-                    <input type="text" id="collegeName" name="collegeName" placeholder="Nhập tên trường" required>
-                    
-                    <label for="collegeStartYear">Năm bắt đầu</label>
-                    <select id="collegeStartYear" name="collegeStartYear" required>
-                        <option value="">Chọn năm</option>
-                        <option value="2023">2023</option>
-                        <option value="2022">2022</option>
-                        <option value="2021">2021</option>
-                        <option value="2020">2020</option>
-                        <option value="2019">2019</option>
-                        <option value="2018">2018</option>
-                    </select>
-                    
-                    <label for="collegeEndYear">Năm kết thúc</label>
-                    <select id="collegeEndYear" name="collegeEndYear" required>
-                        <option value="">Chọn năm</option>
-                        <option value="2023">2023</option>
-                        <option value="2022">2022</option>
-                        <option value="2021">2021</option>
-                        <option value="2020">2020</option>
-                        <option value="2019">2019</option>
-                        <option value="2018">2018</option>
-                    </select>
-
+                    <div class="form-group">
+                        <label for="collegeName">Tên trường</label>
+                        <input type="text" id="collegeName" name="collegeName" placeholder="Nhập tên trường" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="collegeStartYear">Năm nhập học</label>
+                        <select id="collegeStartYear" name="collegeStartYear" required>
+                            <option value="">Chọn năm</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="collegeEndYear">Năm tốt nghiệp</label>
+                        <select id="collegeEndYear" name="collegeEndYear">
+                            <option value="">Chọn năm</option>
+                        </select>
+                    </div>
                     <div class="checkbox-container">
                         <input type="checkbox" id="collegeGraduated" name="collegeGraduated">
                         <label for="collegeGraduated">✅ Đã tốt nghiệp</label>
                     </div>
-
-                    <label for="collegeDescription">Mô tả</label>
-                    <textarea id="collegeDescription" name="collegeDescription" rows="3" placeholder="Mô tả quá trình học tập"></textarea>
                 </form>
             </div>
             <div class="modal-footer">
@@ -245,7 +285,47 @@
             </div>
         </div>
     </div>
-    
-    <script src="profile.js"></script>
+
+    <!-- Relationship Modal -->
+    <div id="relationshipModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Tình trạng quan hệ</h2>
+                <span class="modal-close" id="closeRelationshipModal">×</span>
+            </div>
+            <div class="modal-body">
+                <select id="relationshipInput" class="form-control">
+                    <option value="">Chọn tình trạng</option>
+                    <option value="single">Độc thân</option>
+                    <option value="in_relationship">Đang hẹn hò</option>
+                    <option value="married">Đã kết hôn</option>
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-cancel" id="cancelRelationshipModal">Hủy</button>
+                <button class="btn-save" id="saveRelationship">Lưu</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Phone Modal -->
+    <div id="phoneModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Nhập số điện thoại</h2>
+                <span class="modal-close" id="closePhoneModal">×</span>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="phoneInput" placeholder="Nhập số điện thoại (10 chữ số)" maxlength="10">
+                <div class="error-message" id="phoneError"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-cancel" id="cancelPhoneModal">Hủy</button>
+                <button class="btn-save" id="savePhone">Lưu</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="JS.js"></script>
 </body>
 </html>
