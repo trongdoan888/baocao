@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">BLOGGER</div>
+      <nav class="nav">
+        <a href="#home">Trang Chủ</a>
+        <a href="#about">Giới Thiệu</a>
+        <a href="#login">Đăng Nhập</a>
+        <a href="#contact">Liên Hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Container -->
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Avatar">
+      <h3>Contempo Light</h3>
+      <p>Khám phá thế giới qua từng hành trình.</p>
+
+      <!-- Nút TÙY CHỈNH trong sidebar -->
+      <button class="toggle-button" onclick="toggleBackgroundSelector()">TÙY CHỈNH</button>
+
+      <!-- Chức năng chọn hình nền -->
+      <div class="background-selector" id="background-selector" style="display: none;">
+        <h4>Chọn hình nền</h4>
+        <select id="category-select" onchange="updateImages()">
+          <option value="">Chọn danh mục</option>
+          <option value="travel">Du lịch</option>
+          <option value="science">Khoa học</option>
+          <option value="health">Y tế</option>
+          <option value="nature">Thiên nhiên</option>
+          <option value="technology">Công nghệ</option>
+          <option value="art">Nghệ thuật</option>
+          <option value="food">Ẩm thực</option>
+          <option value="fashion">Thời trang</option>
+          <option value="sports">Thể thao</option>
+          <option value="architecture">Kiến trúc</option>
+          <option value="animals">Động vật</option>
+          <option value="space">Không gian vũ trụ</option>
+        </select>
+        <select id="image-select" onchange="previewBackground()">
+          <option value="">Chọn hình ảnh</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="post">
+        <h2>Những Ngày Hè ở Santorini</h2>
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Santorini">
+        <p>Hãy cùng tôi khám phá những ngôi nhà trắng tinh và khung cảnh tuyệt đẹp ở Santorini...</p>
+      </div>
+      <div class="post">
+        <h2>Khám Phá Ngoài Những Tòa Nhà Chọc Trời: Leo Núi ở Hong Kong</h2>
+        <p>Hong Kong nổi tiếng với đường chân trời, nhưng còn rất nhiều điều để khám phá trên những con đường mòn xanh tươi...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <button onclick="applyBackground()">ÁP DỤNG</button>
+  </div>
+
+  <script src="theme.js"></script>
+</body>
+</html>
