@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Cài Đặt</title>
+    <!-- Liên kết Font Awesome cho các biểu tượng -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="Blog.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Phần Header -->
+    <div class="header">
+        <div class="header-left">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="header-icons">
+            <!-- Biểu tượng trợ giúp -->
+            <i class="fas fa-question-circle"></i>
+            
+            <!-- Grid dots (9 chấm) -->
+            <div class="dots-grid">
+                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle"></i>
+            </div>
+            
+            <!-- Hộp thông báo khi click vào dots grid -->
+            <div class="dots-notification-box" id="dotsNotificationBox">
+                <div class="notification-content">
+                    <p>Chờ phiên bản blog 4.8.8 sắp ra mắt.</p>
+                    <button class="back-btn" id="backToMainBtn">Trở lại</button>
+                </div>
+            </div>
+
+            <!-- Hộp trợ giúp -->
+            <div class="help-box" id="helpBox">
+                <div class="help-item">Trợ giúp</div>
+                <div class="help-item">Gửi phản hồi</div>
+            </div>
+            
+            <!-- Avatar người dùng -->
+            <div class="avatar">
+                <span>H</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nội dung chính -->
+    <div class="main-container">
+        <div class="settings-content">
+            <div class="container">
+                <!-- Nhóm cài đặt Cơ bản -->
+                <div class="setting-group">
+                    <h2>Cơ bản</h2>
+                    
+                    <div class="setting-item title-setting">
+                        <label>Tiêu đề</label>
+                        <p class="text-muted title-text">xXx</p>
+                    </div>
+                    
+                    <div class="setting-item description-setting">
+                        <label>Mô tả</label>
+                        <p class="text-muted description-text"></p>
+                    </div>
+                    
+                    <div class="setting-item language-setting">
+                        <label>Ngôn ngữ trên blog</label>
+                        <p class="text-muted language-text">Vietnamese - Tiếng Việt</p>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label>Nội dung người lớn</label>
+                        <div class="toggle-container">
+                            <p class="text-muted">Hiển thị cảnh báo cho người đọc blog</p>
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label>Mã đo lường trong Google Analytics</label>
+                    </div>
+                    
+                    <div class="setting-item favicon-setting">
+                        <label>Biểu tượng trang web</label>
+                    </div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <!-- Nhóm cài đặt Bảo mật -->
+                <div class="setting-group">
+                    <h2>Bảo mật</h2>
+
+                    <div class="setting-item">
+                        <label>Hiển thị với các công cụ tìm kiếm</label>
+                        <div class="toggle-container">
+                            <p class="text-muted">Cho phép công cụ tìm kiếm tìm thấy blog của bạn</p>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <!-- Nhóm cài đặt Xuất bản -->
+                <div class="setting-group">
+                    <h2>Xuất bản</h2>
+                    
+                    <div class="setting-item">
+                        <label>Địa chỉ blog</label>
+                        <p class="text-muted">hhiepday.blogspot.com</p>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label>Miền tùy chỉnh</label>
+                        <div class="toggle-container">
+                            <p class="text-muted">Chuyển hướng miền</p>
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+                
+                <!-- Nhóm cài đặt HTTPS -->
+                <div class="setting-group">
+                    <h2>HTTPS</h2>
+
+                    <div class="setting-item">
+                        <label>Lệnh chuyển hướng HTTPS</label>
+                        <div class="toggle-container">
+                            <p class="text-muted">Đảm bảo rằng lượt truy cập vào HTTP chuyển hướng tới HTTPS</p>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <!-- Nhóm cài đặt Thẻ meta -->
+                <div class="setting-group">
+                    <h2>Thẻ meta</h2>
+
+                    <div class="setting-item">
+                        <label>Bật mô tả tìm kiếm</label>
+                        <div class="toggle-container">
+                            <p class="text-muted">Nội dung mô tả tìm kiếm</p>
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+                
+                <!-- Nhóm cài đặt Lỗi và chuyển hướng -->
+                <div class="setting-group">
+                    <h2>Lỗi và chuyển hướng</h2>
+                    
+                    <div class="setting-item">
+                        <label>Tùy chỉnh 404</label>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label>Lệnh chuyển hướng tùy chỉnh</label>
+                        <p class="text-muted">Không có mục nào</p>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+                
+                <!-- Nhóm cài đặt Kiếm tiền -->
+                <div class="setting-group">
+                    <h2>Kiếm tiền</h2>
+
+                    <div class="setting-item">
+                        <label>Bật ads.txt tùy chỉnh</label>
+                        <div class="toggle-container">
+                            <p class="text-muted">ads.txt tùy chỉnh</p>
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+                
+                <!-- Nhóm cài đặt Bài đăng -->
+                <div class="setting-group">
+                    <h2>Bài đăng</h2>
+                    
+                    <div class="setting-item">
+                        <label>Số bài đăng tối đa hiển thị trên trang chính</label>
+                        <p class="text-muted">7 bài đăng</p>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label>Mẫu bài đăng (không bắt buộc)</label>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label>Hộp đèn hình ảnh</label>
+                        <div class="toggle-container">
+                            <p class="text-muted">Hiển thị hình ảnh trong lớp phủ ở bên trên bài đăng</p>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="setting-item">
+                        <label>Tải từng phần hình ảnh</label>
+                        <div class="toggle-container">
+                            <p class="text-muted">Tải từng hình ảnh khi người đọc cuộn trang xuống</p>
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="setting-item">
+                        <label>Phân phát hình ảnh bằng WebP</label>
+                        <div class="toggle-container">
+                            <p class="text-muted">Phân phát hình ảnh cho bài đăng bằng WebP</p>
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+                
+                <!-- Nhóm cài đặt Quyền -->
+                <div class="setting-group">
+                    <h2>Quyền</h2>
+                    
+                    <div class="setting-item">
+                        <label>Quản trị viên và tác giả blog</label>
+                        <p class="text-muted">Hoàng Hiệp</p>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label>Mời thêm tác giả</label>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label>Lời mời làm tác giả (đang chờ xử lý)</label>
+                        <p class="text-muted">Không có lời mời đang chờ xử lý nào</p>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <label>Quyền truy cập của người đọc</label>
+                        <div class="toggle-container">
+                            <p class="text-muted">Công khai</p>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="link">Chỉnh sửa hồ sơ</a><br>
+                <a href="#" class="link">Xem hồ sơ</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal chỉnh sửa Tiêu đề -->
+    <div class="modal-overlay" id="titleModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-title">Tiêu đề</div>
+            <div class="modal-divider">
+                <span class="modal-divider-text">Nhập tiêu đề mới: </span>
+            </div>
+            <input type="text" class="modal-input" id="titleInput" placeholder="Nhập tiêu đề blog">
+            <div class="error-message" id="titleError">Vui lòng nhập tiêu đề. Tiêu đề không được để trống!</div>
+            <div class="modal-actions">
+                <button class="modal-btn modal-btn-cancel" id="cancelBtn">HỦY</button>
+                <button class="modal-btn modal-btn-save" id="saveBtn">LƯU</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal chỉnh sửa Mô tả -->
+    <div class="modal-overlay" id="descriptionModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-title">Mô tả</div>
+            <div class="modal-divider">
+                <span class="modal-divider-text">Nhập mô tả mới: </span>
+            </div>
+            <textarea class="modal-input modal-textarea" id="descriptionInput" placeholder="Nhập mô tả blog"></textarea>
+            <div class="modal-actions">
+                <button class="modal-btn modal-btn-cancel" id="cancelDescBtn">HỦY</button>
+                <button class="modal-btn modal-btn-save" id="saveDescBtn">LƯU</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal chọn Ngôn ngữ -->
+    <div class="modal-overlay" id="languageModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-title">Ngôn ngữ trên blog</div>
+            <div class="modal-divider">
+                <span class="modal-divider-text">Chọn ngôn ngữ: </span>
+            </div>
+            
+            <div class="language-options">
+                <label class="radio-container">
+                    <input type="radio" name="language" value="v" checked>
+                    <span class="radio-checkmark"></span>
+                    Vietnamese - Tiếng Việt
+                </label>
+                
+                <label class="radio-container">
+                    <input type="radio" name="language" value="e">
+                    <span class="radio-checkmark"></span>
+                    English - Tiếng Anh
+                </label>
+                
+                <label class="radio-container">
+                    <input type="radio" name="language" value="c">
+                    <span class="radio-checkmark"></span>
+                    Chinese - Tiếng Trung
+                </label>
+                <label class="radio-container">
+                    <input type="radio" name="language" value="g">
+                    <span class="radio-checkmark"></span>
+                    Germany - Tiếng Đức
+                </label>
+                <label class="radio-container">
+                    <input type="radio" name="language" value="k">
+                    <span class="radio-checkmark"></span>
+                    Korea - Tiếng Hàn
+                </label>
+                <label class="radio-container">
+                    <input type="radio" name="language" value="r">
+                    <span class="radio-checkmark"></span>
+                    Russia - Tiếng Nga
+                </label>
+                <label class="radio-container">
+                    <input type="radio" name="language" value="j">
+                    <span class="radio-checkmark"></span>
+                    Japanese - Tiếng Nhật
+                </label>
+                <label class="radio-container">
+                    <input type="radio" name="language" value="f">
+                    <span class="radio-checkmark"></span>
+                    French - Tiếng Pháp
+                </label>
+                <label class="radio-container">
+                    <input type="radio" name="language" value="i">
+                    <span class="radio-checkmark"></span>
+                    Italia - Tiếng Ý
+                </label>
+                <label class="radio-container">
+                    <input type="radio" name="language" value="p">
+                    <span class="radio-checkmark"></span>
+                    Portugal - Tiếng Bồ Đào Nha
+                </label>
+            </div>
+            
+            <div class="modal-actions">
+                <button class="modal-btn modal-btn-cancel" id="cancelLanguageBtn">HỦY</button>
+                <button class="modal-btn modal-btn-save" id="saveLanguageBtn">LƯU</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal tải lên Favicon -->
+    <div class="modal-overlay" id="faviconModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-title">Biểu tượng trang web</div>
+            <div class="modal-divider">
+                <span class="modal-divider-text">Tải lên biểu tượng mới: </span>
+            </div>
+            <div class="upload-container">
+                <input type="file" id="faviconInput" accept="image/*" style="display: none;">
+                <button class="upload-btn" id="chooseFileBtn">Chọn ảnh từ máy tính</button>
+                <div class="image-preview" id="imagePreview">
+                    <p>Không có ảnh nào được chọn</p>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="modal-btn modal-btn-cancel" id="cancelFaviconBtn">HỦY</button>
+                <button class="modal-btn modal-btn-save" id="saveFaviconBtn">LƯU</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal thay đổi Avatar -->
+    <div class="modal-overlay" id="avatarModal">
+        <div class="modal-content small-modal">
+            <span class="close-modal">&times;</span>
+            <div class="modal-title">Chuyển đổi tài khoản</div>
+            <input type="text" class="modal-input" id="avatarInput" placeholder="Nhập tên tài khoản">
+            <div class="error-message" id="avatarError">Vui lòng nhập tên tài khoản mới!</div>
+            <div class="divider-blue"></div>
+            <div class="modal-actions">
+                <button class="modal-btn modal-btn-cancel" id="cancelAvatarBtn">HỦY</button>
+                <button class="modal-btn modal-btn-save" id="saveAvatarBtn">LƯU</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="Blog.js"></script>
+</body>
+</html>

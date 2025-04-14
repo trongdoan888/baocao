@@ -24,6 +24,13 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   }
   
+
+  .back {
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
   /* Chữ BLOGGER với gradient xanh duyên dáng */
   .logo {
     text-align: center;

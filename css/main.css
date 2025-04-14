@@ -83,7 +83,7 @@ body {
 /* Phần Hero */
 .hero {
   height: 100vh;
-  background-image: url(/img/flat-lay-work-space-with-notebook-keyboard.jpg);
+  background-image: url(/img/flat-lay-workstation-with-copy-space-laptop.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -287,4 +287,14 @@ body {
   .hero-content p {
     font-size: 1rem;
   }
+}
+
+/* Cuộn mượt và trừ khoảng cách header (bằng CSS) */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Bù header cố định để không bị che mất khi cuộn đến */
+section {
+  scroll-margin-top: 70px; /* Phù hợp với padding-top trong <body> */
 }

@@ -1,20 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Smooth scrolling cho các liên kết trong thanh điều hướng
-  const navLinks = document.querySelectorAll('.nav a');
-  navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href');
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
-        window.scrollTo({
-          top: targetElement.offsetTop - 60, // Trừ khoảng cách của header cố định
-          behavior: 'smooth'
-        });
-      }
-    });
-  });
-
+  
   // Xử lý sự kiện submit cho form đăng nhập
   const loginForm = document.getElementById('loginForm');
   const errorMsg = document.getElementById('errorMsg');

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Không có bài đăng</title>
+    <title></title>
     <link rel="stylesheet" href="/css/post.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
@@ -13,7 +13,7 @@
     <header class="header">
         <div class="container">
             <div class="logo">BLOGGER</div>
-            <input class="search">
+            <input class="search" placeholder="Tìm kiếm">
             <button class="menu-toggle"><i class="fas fa-bars"></i></button>
         </div>
     </header>
@@ -21,34 +21,25 @@
     <!-- Menu Ẩn -->
     <nav class="side-menu">
         <button class="close-menu"><i class="fas fa-times"></i></button>
-        <a href="">Bài Đăng</a>
+        <a href="profile.html">Trang Cá Nhân</a>
         <a href="#">Thống Kê</a>
         <a href="">Nhận Xét</a>
-        <a href="#">Thu Nhập</a>
         <a href="#">Trang</a>
-        <a href="#">Chủ Đề</a>
+        <a href="layout.html">Chủ Đề</a>
         <a href="#">Cài Đặt</a>
-        <a href="#">Danh Sách Đọc</a>
     </nav>
-
-    <!-- Lớp phủ nền khi menu mở -->
-    <div class="overlay"></div>
 
     <!-- Nội dung chính -->
     <main class="main-content">
         <div class="empty-post-container">
-            <i class="fas fa-pencil-alt empty-icon"></i>
+            <i class="fas fa-pencil-alt empty-icon" ></i>
             <h2>Không có bài đăng nào</h2>
             <p>Các bài đăng bạn tạo sẽ xuất hiện ở đây</p>
-            <button class="add-post-btn"><i class="fas fa-plus"></i></button>
         </div>
+
+        <button class="add-post-btn"><i class="fas fa-plus" onclick="window.location.href='postpass.html'"></i></button>
     </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        © 2025 BLOGGER. All rights reserved.
-    </footer>
-
+    
     <!-- JavaScript -->
     <script src="/js/post.js"></script>
 </body>

@@ -9,7 +9,7 @@
 /* Container chung */
 .container {
     width: 90%;
-    max-width: 1300px;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -34,11 +34,13 @@
 }
 
 .search {
-    border: 2cap outset gray;
-    border-radius: 999px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 8px;
     height: 30px;
     width: 50%;
-    background-color: #e6e3e3;
+    background-color: #ffffff;
+    padding-left: 20px;
+    border: 1px solid #ccc;
 }
 
 /* Nút mở menu */
@@ -74,7 +76,7 @@
 }
 
 .side-menu a:hover {
-    background: rgba(240, 6, 6, 0.2);
+    background: #2c3e50;
     border-radius: 5px;
 }
 
@@ -139,18 +141,18 @@ p {
 
 /* Nút Thêm Bài Đăng */
 .add-post-btn {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    position: fixed;
+    right: 10%;
+    display: flex;
     background: #ff5722;
     color: white;
     border: none;
-    font-size: 24px;
-    padding: 15px;
+    font-size: 35px;
+    padding: 20px;
     border-radius: 50%;
     cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    bottom: 8%;
 }
 
 .add-post-btn:hover {
@@ -158,13 +160,3 @@ p {
     transform: scale(1.1);
 }
 
-/* Footer */
-.footer {
-    text-align: center;
-    background: #333;
-    color: white;
-    padding: 15px 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
