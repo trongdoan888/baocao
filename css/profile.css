@@ -1,4 +1,4 @@
-/* Reset & Định dạng cơ bản */
+/* Reset & Basic Formatting */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -11,6 +11,7 @@ body {
     margin: 0 auto;
     position: relative;
 }
+
 /* Cover Photo */
 .cover-photo {
     width: 100%;
@@ -23,6 +24,7 @@ body {
     height: 100%;
     object-fit: cover;
 }
+
 /* Profile Photo */
 .profile-photo {
     width: 168px;
@@ -35,7 +37,8 @@ body {
     object-fit: cover;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
-/* Thông tin hồ sơ */
+
+/* Profile Information */
 .profile-info {
     padding: 20px;
     background-color: white;
@@ -55,22 +58,6 @@ body {
     margin: 5px 0;
     color: #606770;
 }
-.friends {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-}
-.friends img {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    margin-right: 5px;
-    object-fit: cover;
-}
-.friends span {
-    color: #606770;
-    font-size: 14px;
-}
 .profile-actions {
     display: flex;
     justify-content: flex-end;
@@ -87,6 +74,21 @@ body {
     font-size: 14px;
     transition: background 0.3s;
 }
+.profile-actions button.add-to-story {
+    background-color: #1b74e4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 0;
+    margin-right: 10px;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+.profile-actions button.add-to-story:hover {
+    background-color: #166fe5;
+}
 .profile-actions button.edit {
     background-color: #e4e6eb;
     color: black;
@@ -94,134 +96,81 @@ body {
 .profile-actions button:hover {
     opacity: 0.9;
 }
-/* Thanh điều hướng */
-.nav-tabs {
-    display: flex;
-    justify-content: space-around;
-    background-color: white;
-    margin: 20px;
-    border-bottom: 1px solid #dddfe2;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-}
-.nav-tabs a {
-    flex: 1;
-    text-align: center;
-    padding: 15px 0;
-    text-decoration: none;
-    color: #606770;
-    font-weight: 500;
-    transition: all 0.3s;
-}
-.nav-tabs a:hover {
-    background: #f0f2f5;
-}
-.nav-tabs a.active {
-    color: #1877f2;
-    border-bottom: 3px solid #1877f2;
-    background: #f0f2f5;
-}
-/* Nội dung chính */
-.content {
-    display: flex;
-    margin: 20px;
-}
-/* Sidebar */
-.sidebar {
-    width: 30%;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-    padding: 20px;
-    height: fit-content;
-}
-.sidebar-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-}
-.sidebar-header h2 {
-    font-size: 20px;
-    font-weight: 700;
-    margin: 0;
-    border-bottom: none;
-    padding-bottom: 0;
-}
-.toggle-arrow {
-    transition: transform 0.3s;
-    color: #606770;
-}
-.toggle-arrow.collapsed {
-    transform: rotate(-90deg);
-}
-.sidebar-list {
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    max-height: 500px; /* Giá trị đủ lớn để hiển thị tất cả */
-}
-.sidebar-list.collapsed {
-    max-height: 0;
-}
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    margin-top: 15px;
-}
-.sidebar ul li {
-    padding: 10px 0;
-    border-bottom: 1px solid #dddfe2;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 14px;
-    color: #606770;
-}
-.sidebar ul li:last-child {
-    border-bottom: none;
-}
-.sidebar ul li i {
-    margin-right: 10px;
-}
-.sidebar ul li .edit {
-    color: #1877f2;
-    font-size: 14px;
-    cursor: pointer;
-}
+
 /* Main Content */
-.main-content {
-    width: 70%;
-    margin-left: 20px;
-}
-.info-item {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-    padding: 20px;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-}
-.info-item i {
-    color: #606770;
-    margin-right: 10px;
-    font-size: 18px;
-}
-.info-item.default {
-    color: #000;
-}
-/* Các mục "Thêm" với chữ xanh và không có nền */
-.info-item.add {
-    color: #1877f2;
-    cursor: pointer;
-    background: none;
-    border: none;
+.content {
+    margin: 20px;
 }
 
-/* Modal chung */
+/* New Introduction Section */
+.intro-section {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.intro-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+.intro-header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #1a1a1a;
+}
+.edit-intro {
+    background: none;
+    border: none;
+    color: #1877f2;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.2s;
+}
+.edit-intro:hover {
+    background: #f0f2f5;
+}
+.intro-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+.intro-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background 0.2s;
+    border: 1px solid #eee;
+}
+.intro-item:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.intro-item i {
+    font-size: 20px;
+    color: #1877f2;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+.intro-item h4 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    color: #1a1a1a;
+}
+.intro-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #65676b;
+}
+
+/* Modal Styles */
 .modal {
     display: none;
     position: fixed;
@@ -232,17 +181,15 @@ body {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
-    padding-top: 50px;
 }
 .modal-content {
     background-color: #fff;
-    margin: auto;
+    margin: 50px auto;
     border-radius: 8px;
     padding: 20px;
     width: 90%;
     max-width: 600px;
     position: relative;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 .modal-header {
     display: flex;
@@ -262,8 +209,6 @@ body {
 }
 .modal-body {
     margin-top: 20px;
-    display: flex;
-    flex-direction: column;
 }
 .modal-body label {
     display: block;
@@ -282,12 +227,6 @@ body {
     border-radius: 4px;
     font-size: 14px;
     box-sizing: border-box;
-}
-.modal-body input:focus,
-.modal-body textarea:focus,
-.modal-body select:focus {
-    outline: none;
-    border-color: #1877f2;
 }
 .modal-body textarea {
     resize: vertical;
@@ -313,17 +252,13 @@ body {
     border-top: 1px solid #dddfe2;
     padding-top: 10px;
 }
-.modal-footer button {
+.btn-cancel, .btn-save {
     padding: 8px 15px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
     transition: background 0.3s;
-}
-.btn-public {
-    background-color: #e4e6eb;
-    color: #1877f2;
 }
 .btn-cancel {
     background-color: #f5f6f7;
@@ -333,22 +268,66 @@ body {
     background-color: #1877f2;
     color: #fff;
 }
-.btn-public:hover,
-.btn-cancel:hover,
-.btn-save:hover {
-    opacity: 0.9;
+.error-message {
+    color: #ff0000;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
+
+/* Edit Options List */
+.edit-options-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.edit-option {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: background 0.2s;
+    border-bottom: 1px solid #dddfe2;
+}
+.edit-option:last-child {
+    border-bottom: none;
+}
+.edit-option:hover {
+    background: #f0f2f5;
+}
+.edit-option i {
+    font-size: 18px;
+    width: 30px;
+    color: #1877f2;
+}
+.edit-option span {
+    margin-left: 10px;
+    font-size: 16px;
+    color: #050505;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .content {
+    .profile-actions {
         flex-direction: column;
+        align-items: flex-end;
     }
-    .sidebar, .main-content {
+    .profile-actions button {
+        margin: 5px 0;
         width: 100%;
-        margin: 0;
     }
-    .main-content {
-        margin-top: 20px;
+    .profile-actions button.add-to-story {
+        margin-right: 0;
+    }
+    .intro-content {
+        grid-template-columns: 1fr;
+    }
+    .intro-item {
+        padding: 12px;
+    }
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+        top: 230px;
     }
 }
