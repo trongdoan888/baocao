@@ -6,13 +6,32 @@
     <title>Profile Page</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
-    <link href="profile.css" rel="stylesheet"/>
+    <link href="/css/profile.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
+
+    <div >
+        <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+    </div>
+    <!-- Menu Ẩn -->
+    <div>
+        <nav class="side-menu">
+            <button class="close-menu"><i class="fas fa-times"></i></button>
+            <a href="main.html"><i class="fas fa-home"></i> Trang Chủ</a>
+            <a href="profile.html"><i class="fas fa-user"></i> Trang Cá Nhân</a>
+            <a href="Statistical.html"><i class="fas fa-chart-bar"></i> Thống Kê</a>
+            <a href="layout.html"><i class="fas fa-th-large"></i> Bố Cục</a>
+            <a href="theme.html"><i class="fas fa-paint-brush"></i> Chủ Đề</a>
+            <a href="Setting.html"><i class="fas fa-cog"></i> Cài Đặt</a>
+        </nav>
+    </div>
+
     <div class="container">
         <!-- Cover Photo -->
         <div class="cover-photo">
             <img alt="Cover photo" src="https://via.placeholder.com/1000x300/808080/808080?text="/>
+          
         </div>
         
         <!-- Profile Photo -->
@@ -286,6 +305,6 @@
         </div>
     </div>
     
-    <script src="profile.js"></script>
+    <script src="/js/profile.js"></script>
 </body>
 </html>

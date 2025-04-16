@@ -1,27 +1,35 @@
 document.addEventListener('DOMContentLoaded', function () {
     /** ===================== COMMON FUNCTION ===================== **/
-    const toggleBodyScroll = (enable) => {
-        document.body.style.overflow = enable ? 'auto' : 'hidden';
-        document.body.classList.toggle('no-scroll', !enable);
-    };
+    function toggleBodyScroll(enable) {
+        if (enable) {
+            document.body.style.overflow = 'auto';
+            document.body.classList.remove('no-scroll');
+        } else {
+            document.body.style.overflow = 'hidden';
+            document.body.classList.add('no-scroll');
+        }
+    }
 
-    const closeModal = (modal) => {
+    function closeModal(modal) {
         if (!modal) return;
         modal.classList.remove('active');
         toggleBodyScroll(true);
-        if (modal.id === 'titleModal' && titleError) {
-            titleError.style.display = 'none';
+        if (modal.id === 'titleModal') {
+            var titleError = document.getElementById('titleError');
+            if (titleError) {
+                titleError.style.display = 'none';
+            }
         }
-    };
+    }
 
     /** ===================== TITLE MODAL ===================== **/
-    const titleSetting = document.querySelector('.title-setting');
-    const titleText = document.querySelector('.title-text');
-    const titleModal = document.getElementById('titleModal');
-    const titleInput = document.getElementById('titleInput');
-    const saveTitleBtn = document.getElementById('saveBtn');
-    const cancelTitleBtn = document.getElementById('cancelBtn');
-    const titleError = document.getElementById('titleError');
+    var titleSetting = document.querySelector('.title-setting');
+    var titleText = document.querySelector('.title-text');
+    var titleModal = document.getElementById('titleModal');
+    var titleInput = document.getElementById('titleInput');
+    var saveTitleBtn = document.getElementById('saveBtn');
+    var cancelTitleBtn = document.getElementById('cancelBtn');
+    var titleError = document.getElementById('titleError');
 
     if (titleSetting) {
         titleSetting.addEventListener('click', function (e) {
@@ -35,8 +43,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (saveTitleBtn) {
         saveTitleBtn.addEventListener('click', function () {
-            const newTitle = titleInput.value.trim();
-            if (!newTitle) {
+            var newTitle = titleInput.value.trim();
+            if (newTitle === '') {
                 titleError.style.display = 'block';
                 return;
             }
@@ -46,16 +54,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (cancelTitleBtn) {
-        cancelTitleBtn.addEventListener('click', () => closeModal(titleModal));
+        cancelTitleBtn.addEventListener('click', function () {
+            closeModal(titleModal);
+        });
     }
 
     /** ===================== DESCRIPTION MODAL ===================== **/
-    const descSetting = document.querySelector('.description-setting');
-    const descText = document.querySelector('.description-text');
-    const descModal = document.getElementById('descriptionModal');
-    const descInput = document.getElementById('descriptionInput');
-    const saveDescBtn = document.getElementById('saveDescBtn');
-    const cancelDescBtn = document.getElementById('cancelDescBtn');
+    var descSetting = document.querySelector('.description-setting');
+    var descText = document.querySelector('.description-text');
+    var descModal = document.getElementById('descriptionModal');
+    var descInput = document.getElementById('descriptionInput');
+    var saveDescBtn = document.getElementById('saveDescBtn');
+    var cancelDescBtn = document.getElementById('cancelDescBtn');
 
     if (descSetting) {
         descSetting.addEventListener('click', function (e) {
@@ -74,18 +84,20 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     if (cancelDescBtn) {
-        cancelDescBtn.addEventListener('click', () => closeModal(descModal));
+        cancelDescBtn.addEventListener('click', function () {
+            closeModal(descModal);
+        });
     }
 
     /** ===================== LANGUAGE MODAL ===================== **/
-    const languageSetting = document.querySelector('.language-setting');
-    const languageText = document.querySelector('.language-text');
-    const languageModal = document.getElementById('languageModal');
-    const saveLanguageBtn = document.getElementById('saveLanguageBtn');
-    const cancelLanguageBtn = document.getElementById('cancelLanguageBtn');
-    const languageRadios = document.querySelectorAll('input[name="language"]');
+    var languageSetting = document.querySelector('.language-setting');
+    var languageText = document.querySelector('.language-text');
+    var languageModal = document.getElementById('languageModal');
+    var saveLanguageBtn = document.getElementById('saveLanguageBtn');
+    var cancelLanguageBtn = document.getElementById('cancelLanguageBtn');
+    var languageRadios = document.querySelectorAll('input[name="language"]');
 
-    const languageMap = {
+    var languageMap = {
         v: 'Vietnamese - Tiếng Việt',
         e: 'English - Tiếng Anh',
         c: 'Chinese - Tiếng Trung',
@@ -95,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
         j: 'Japanese - Tiếng Nhật',
         f: 'France - Tiếng Pháp',
         i: 'Italia - Tiếng Ý',
-        p: 'Portugal - Tiếng Bồ Đào Nha',
+        p: 'Portugal - Tiếng Bồ Đào Nha'
     };
 
     if (languageSetting) {
@@ -108,35 +120,42 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (saveLanguageBtn) {
         saveLanguageBtn.addEventListener('click', function () {
-            let selected = 'v';
-            languageRadios.forEach(r => { if (r.checked) selected = r.value; });
+            var selected = 'v';
+            for (var i = 0; i < languageRadios.length; i++) {
+                if (languageRadios[i].checked) {
+                    selected = languageRadios[i].value;
+                }
+            }
             languageText.textContent = languageMap[selected] || '';
             closeModal(languageModal);
         });
     }
 
     if (cancelLanguageBtn) {
-        cancelLanguageBtn.addEventListener('click', () => closeModal(languageModal));
+        cancelLanguageBtn.addEventListener('click', function () {
+            closeModal(languageModal);
+        });
     }
 
     /** ===================== FAVICON MODAL ===================== **/
-    const faviconSetting = document.querySelector('.favicon-setting');
-    const faviconModal = document.getElementById('faviconModal');
-    const faviconInput = document.getElementById('faviconInput');
-    const chooseFileBtn = document.getElementById('chooseFileBtn');
-    const imagePreview = document.getElementById('imagePreview');
-    const saveFaviconBtn = document.getElementById('saveFaviconBtn');
-    const cancelFaviconBtn = document.getElementById('cancelFaviconBtn');
+    var faviconSetting = document.querySelector('.favicon-setting');
+    var faviconModal = document.getElementById('faviconModal');
+    var faviconInput = document.getElementById('faviconInput');
+    var chooseFileBtn = document.getElementById('chooseFileBtn');
+    var imagePreview = document.getElementById('imagePreview');
+    var saveFaviconBtn = document.getElementById('saveFaviconBtn');
+    var cancelFaviconBtn = document.getElementById('cancelFaviconBtn');
 
-    const faviconPreviewContainer = document.createElement('div');
+    var faviconPreviewContainer = document.createElement('div');
     faviconPreviewContainer.className = 'favicon-preview-container';
-    const faviconPreview = document.createElement('img');
+    var faviconPreview = document.createElement('img');
     faviconPreview.className = 'favicon-preview';
     faviconPreview.style.display = 'none';
     faviconPreviewContainer.appendChild(faviconPreview);
-    faviconSetting?.appendChild(faviconPreviewContainer);
 
     if (faviconSetting) {
+        faviconSetting.appendChild(faviconPreviewContainer);
+
         faviconSetting.addEventListener('click', function (e) {
             e.stopPropagation();
             faviconModal.classList.add('active');
@@ -144,124 +163,163 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    chooseFileBtn?.addEventListener('click', () => faviconInput.click());
+    if (chooseFileBtn) {
+        chooseFileBtn.addEventListener('click', function () {
+            faviconInput.click();
+        });
+    }
 
-    faviconInput?.addEventListener('change', function () {
-        const file = this.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                let previewImg = imagePreview.querySelector('img');
-                if (!previewImg) {
-                    previewImg = document.createElement('img');
-                    imagePreview.innerHTML = '';
-                    imagePreview.appendChild(previewImg);
-                }
-                previewImg.src = e.target.result;
-                imagePreview.querySelector('p')?.style?.setProperty('display', 'none');
-                previewImg.style.display = 'block';
-            };
-            reader.readAsDataURL(file);
-        }
-    });
+    if (faviconInput) {
+        faviconInput.addEventListener('change', function () {
+            var file = this.files[0];
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    var previewImg = imagePreview.querySelector('img');
+                    if (!previewImg) {
+                        previewImg = document.createElement('img');
+                        imagePreview.innerHTML = '';
+                        imagePreview.appendChild(previewImg);
+                    }
+                    previewImg.src = e.target.result;
+                    var p = imagePreview.querySelector('p');
+                    if (p) {
+                        p.style.display = 'none';
+                    }
+                    previewImg.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    }
 
-    saveFaviconBtn?.addEventListener('click', () => {
-        const file = faviconInput.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                faviconPreview.src = e.target.result;
-                faviconPreview.style.display = 'inline-block';
+    if (saveFaviconBtn) {
+        saveFaviconBtn.addEventListener('click', function () {
+            var file = faviconInput.files[0];
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    faviconPreview.src = e.target.result;
+                    faviconPreview.style.display = 'inline-block';
+                    closeModal(faviconModal);
+                };
+                reader.readAsDataURL(file);
+            } else {
                 closeModal(faviconModal);
-            };
-            reader.readAsDataURL(file);
-        } else {
-            closeModal(faviconModal);
-        }
-    });
+            }
+        });
+    }
 
-    cancelFaviconBtn?.addEventListener('click', () => {
-        closeModal(faviconModal);
-        imagePreview.innerHTML = '<p>Không có ảnh nào được chọn</p>';
-        faviconInput.value = '';
-    });
+    if (cancelFaviconBtn) {
+        cancelFaviconBtn.addEventListener('click', function () {
+            closeModal(faviconModal);
+            imagePreview.innerHTML = '<p>Không có ảnh nào được chọn</p>';
+            faviconInput.value = '';
+        });
+    }
 
     /** ===================== AVATAR MODAL ===================== **/
-    const avatarButton = document.querySelector('.avatar');
-    const avatarModal = document.getElementById('avatarModal');
-    const avatarInput = document.getElementById('avatarInput');
-    const saveAvatarBtn = document.getElementById('saveAvatarBtn');
-    const cancelAvatarBtn = document.getElementById('cancelAvatarBtn');
-    const avatarError = document.getElementById('avatarError');
+    var avatarButton = document.querySelector('.avatar');
+    var avatarModal = document.getElementById('avatarModal');
+    var avatarInput = document.getElementById('avatarInput');
+    var saveAvatarBtn = document.getElementById('saveAvatarBtn');
+    var cancelAvatarBtn = document.getElementById('cancelAvatarBtn');
+    var avatarError = document.getElementById('avatarError');
 
-    avatarButton?.addEventListener('click', function (e) {
-        e.stopPropagation();
-        avatarModal.classList.add('active');
-        toggleBodyScroll(false);
-        avatarError.style.display = 'none';
-    });
+    if (avatarButton) {
+        avatarButton.addEventListener('click', function (e) {
+            e.stopPropagation();
+            avatarModal.classList.add('active');
+            toggleBodyScroll(false);
+            avatarError.style.display = 'none';
+        });
+    }
 
-    saveAvatarBtn?.addEventListener('click', function () {
-        const newName = avatarInput.value.trim();
-        if (!newName) {
-            avatarError.style.display = 'block';
-            return;
-        }
+    if (saveAvatarBtn) {
+        saveAvatarBtn.addEventListener('click', function () {
+            var newName = avatarInput.value.trim();
+            if (newName === '') {
+                avatarError.style.display = 'block';
+                return;
+            }
 
-        const words = newName.split(' ');
-        const lastName = words[words.length - 1];
-        const firstLetter = lastName.charAt(0).toUpperCase();
-        avatarButton.querySelector('span').textContent = firstLetter;
+            var words = newName.split(' ');
+            var lastName = words[words.length - 1];
+            var firstLetter = lastName.charAt(0).toUpperCase();
+            var span = avatarButton.querySelector('span');
+            if (span) {
+                span.textContent = firstLetter;
+            }
 
-        closeModal(avatarModal);
-        avatarInput.value = '';
-    });
+            closeModal(avatarModal);
+            avatarInput.value = '';
+        });
+    }
 
-    cancelAvatarBtn?.addEventListener('click', function () {
-        closeModal(avatarModal);
-        avatarInput.value = '';
-        avatarError.style.display = 'none';
-    });
+    if (cancelAvatarBtn) {
+        cancelAvatarBtn.addEventListener('click', function () {
+            closeModal(avatarModal);
+            avatarInput.value = '';
+            avatarError.style.display = 'none';
+        });
+    }
 
     /** ===================== DOTS GRID NOTIFICATION ===================== **/
-    const dotsGrid = document.querySelector('.dots-grid');
-    const dotsNotificationBox = document.getElementById('dotsNotificationBox');
-    const backToMainBtn = document.getElementById('backToMainBtn');
+    var dotsGrid = document.querySelector('.dots-grid');
+    var dotsNotificationBox = document.getElementById('dotsNotificationBox');
+    var backToMainBtn = document.getElementById('backToMainBtn');
+    var helpBox = document.getElementById('helpBox');
 
-    dotsGrid?.addEventListener('click', function (e) {
-        e.stopPropagation();
-        dotsNotificationBox.style.display = dotsNotificationBox.style.display === 'block' ? 'none' : 'block';
-        helpBox.style.display = 'none';
-    });
+    if (dotsGrid) {
+        dotsGrid.addEventListener('click', function (e) {
+            e.stopPropagation();
+            if (dotsNotificationBox.style.display === 'block') {
+                dotsNotificationBox.style.display = 'none';
+            } else {
+                dotsNotificationBox.style.display = 'block';
+            }
+            helpBox.style.display = 'none';
+        });
+    }
 
-    backToMainBtn?.addEventListener('click', () => {
-        dotsNotificationBox.style.display = 'none';
-    });
+    if (backToMainBtn) {
+        backToMainBtn.addEventListener('click', function () {
+            dotsNotificationBox.style.display = 'none';
+        });
+    }
 
     /** ===================== CLOSE MODALS WITH BUTTON/ESC ===================== **/
-    const closeButtons = document.querySelectorAll('.close-modal');
-    closeButtons.forEach(btn => {
-        btn.addEventListener('click', function () {
-            const modal = this.closest('.modal-overlay');
+    var closeButtons = document.querySelectorAll('.close-modal');
+    for (var i = 0; i < closeButtons.length; i++) {
+        closeButtons[i].addEventListener('click', function () {
+            var modal = this.closest('.modal-overlay');
             closeModal(modal);
         });
-    });
+    }
 
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') {
-            document.querySelectorAll('.modal-overlay.active').forEach(modal => closeModal(modal));
+            var modals = document.querySelectorAll('.modal-overlay.active');
+            for (var i = 0; i < modals.length; i++) {
+                closeModal(modals[i]);
+            }
         }
     });
 
     /** ===================== HELP BOX ===================== **/
-    const helpIcon = document.querySelector('.fa-question-circle');
-    const helpBox = document.getElementById('helpBox');
+    var helpIcon = document.querySelector('.fa-question-circle');
 
-    helpIcon?.addEventListener('click', function (e) {
-        e.stopPropagation();
-        helpBox.style.display = helpBox.style.display === 'block' ? 'none' : 'block';
-        dotsNotificationBox.style.display = 'none';
-    });
+    if (helpIcon) {
+        helpIcon.addEventListener('click', function (e) {
+            e.stopPropagation();
+            if (helpBox.style.display === 'block') {
+                helpBox.style.display = 'none';
+            } else {
+                helpBox.style.display = 'block';
+            }
+            dotsNotificationBox.style.display = 'none';
+        });
+    }
 
     document.addEventListener('click', function (e) {
         if (helpBox && !helpBox.contains(e.target) && e.target !== helpIcon) {
@@ -269,8 +327,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    helpBox?.querySelectorAll('.help-item').forEach(item => {
-        item.addEventListener('click', function () {
+    var helpItems = [];
+    if (helpBox) {
+        helpItems = helpBox.querySelectorAll('.help-item');
+    }
+    for (var i = 0; i < helpItems.length; i++) {
+        helpItems[i].addEventListener('click', function () {
             if (this.textContent === 'Trợ giúp') {
                 alert('Mở trang trợ giúp');
             } else if (this.textContent === 'Gửi phản hồi') {
@@ -278,25 +340,57 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             helpBox.style.display = 'none';
         });
-    });
+    }
 
     /** ===================== CUSTOMIZE DROPDOWN ===================== **/
-    const toggleDropdown = () => {
-        const dropdown = document.getElementById("customizeDropdown");
-        if (dropdown) dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
-    };
+    function toggleDropdown() {
+        var dropdown = document.getElementById("customizeDropdown");
+        if (dropdown) {
+            if (dropdown.style.display === "block") {
+                dropdown.style.display = "none";
+            } else {
+                dropdown.style.display = "block";
+            }
+        }
+    }
 
     document.addEventListener('click', function (event) {
         if (!event.target.closest('.customize-container')) {
-            document.querySelectorAll('.customize-dropdown').forEach(dropdown => {
-                dropdown.style.display = "none";
-            });
+            var dropdowns = document.querySelectorAll('.customize-dropdown');
+            for (var i = 0; i < dropdowns.length; i++) {
+                dropdowns[i].style.display = "none";
+            }
         }
     });
 
-    /** ===================== FOOTER CLICK EVENT ===================== **/
-    const footerText = document.querySelector('.footer-text');
-    footerText?.addEventListener('click', function() {
-        alert('Trang của bạn hiện không có người theo dõi');
-    });
+    /** ===================== FOOTER EVENT ===================== **/
+    var footerText = document.querySelector('.footer-text');
+    if (footerText) {
+        footerText.addEventListener('click', function () {
+            alert('Trang của bạn hiện không có người theo dõi');
+        });
+    }
+});
+
+// Lấy phần tử cần sử dụng
+const menuToggle = document.querySelector(".menu-toggle");
+const sideMenu = document.querySelector(".side-menu");
+const closeMenu = document.querySelector(".close-menu");
+
+// Khi ấn vào nút 3 gạch
+menuToggle.addEventListener("click", (event) => {
+    sideMenu.classList.add("open");
+    event.stopPropagation(); // Ngăn chặn sự kiện click lan ra document
+});
+
+// Khi ấn vào nút đóng (×)
+closeMenu.addEventListener("click", () => {
+    sideMenu.classList.remove("open");
+});
+
+// Khi ấn ra ngoài menu
+document.addEventListener("click", (event) => {
+    if (!sideMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+        sideMenu.classList.remove("open");
+    }
 });

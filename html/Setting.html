@@ -6,56 +6,32 @@
     <title>Trang Cài Đặt</title>
     <!-- Liên kết Font Awesome cho các biểu tượng -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-    <link href="Blog.css" rel="stylesheet">
+    <link href="/css/Setting+Statistical.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Phần Header -->
-    <div class="header">
-        <div class="header-left">
-            <i class="fas fa-bars"></i>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">BLOGGER</div>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
         </div>
-        <div class="header-icons">
-            <!-- Biểu tượng trợ giúp -->
-            <i class="fas fa-question-circle"></i>
-            
-            <!-- Grid dots (9 chấm) -->
-            <div class="dots-grid">
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-            </div>
-            
-            <!-- Hộp thông báo khi click vào dots grid -->
-            <div class="dots-notification-box" id="dotsNotificationBox">
-                <div class="notification-content">
-                    <p>Chờ phiên bản blog 4.8.8 sắp ra mắt.</p>
-                    <button class="back-btn" id="backToMainBtn">Trở lại</button>
-                </div>
-            </div>
+    </header>
 
-            <!-- Hộp trợ giúp -->
-            <div class="help-box" id="helpBox">
-                <div class="help-item">Trợ giúp</div>
-                <div class="help-item">Gửi phản hồi</div>
-            </div>
-            
-            <!-- Avatar người dùng -->
-            <div class="avatar">
-                <span>H</span>
-            </div>
-        </div>
-    </div>
+    <!-- Menu Ẩn -->
+    <nav class="side-menu">
+        <button class="close-menu"><i class="fas fa-times"></i></button>
+        <a href="main.html"><i class="fas fa-home"></i> Trang Chủ</a>
+        <a href="profile.html"><i class="fas fa-user"></i> Trang Cá Nhân</a>
+        <a href="Statistical.html"><i class="fas fa-chart-bar"></i> Thống Kê</a>
+        <a href="layout.html"><i class="fas fa-th-large"></i> Bố Cục</a>
+        <a href="theme.html"><i class="fas fa-paint-brush"></i> Chủ Đề</a>
+        <a href="Setting.html"><i class="fas fa-cog"></i> Cài Đặt</a>
+    </nav>
 
     <!-- Nội dung chính -->
     <div class="main-container">
         <div class="settings-content">
-            <div class="container">
+            <div class="container1">
                 <!-- Nhóm cài đặt Cơ bản -->
                 <div class="setting-group">
                     <h2>Cơ bản</h2>
@@ -434,6 +410,6 @@
         </div>
     </div>
 
-    <script src="Blog.js"></script>
+    <script src="/js/Setting+Statistical.js"></script>
 </body>
 </html>

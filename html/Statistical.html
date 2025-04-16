@@ -4,122 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang Thống Kê</title>
-    <!-- Liên kết Font Awesome cho các biểu tượng -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-    <link href="Blog.css" rel="stylesheet">
+    <link href="/css/Setting+Statistical.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Phần Header -->
-    <div class="header">
-        <div class="header-left">
-            <i class="fas fa-bars"></i>
-        </div>
-        <div class="header-icons">
-            <!-- Biểu tượng trợ giúp -->
-            <i class="fas fa-question-circle"></i>
-            
-            <!-- Grid dots (9 chấm) -->
-            <div class="dots-grid">
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
+   <!-- Header -->
+   <header class="header">
+    <div class="container">
+        <div class="logo">BLOGGER</div>
+        <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+    </div>
+</header>
+
+<!-- Menu Ẩn -->
+<nav class="side-menu">
+    <button class="close-menu"><i class="fas fa-times"></i></button>
+    <a href="main.html"><i class="fas fa-home"></i> Trang Chủ</a>
+    <a href="profile.html"><i class="fas fa-user"></i> Trang Cá Nhân</a>
+    <a href="Statistical.html"><i class="fas fa-chart-bar"></i> Thống Kê</a>
+    <a href="layout.html"><i class="fas fa-th-large"></i> Bố Cục</a>
+    <a href="theme.html"><i class="fas fa-paint-brush"></i> Chủ Đề</a>
+    <a href="Setting.html"><i class="fas fa-cog"></i> Cài Đặt</a>
+</nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="sidebar-header">
+                <span>hhiepday_</span>
+                <i class="fas fa-caret-down"></i>
             </div>
-            
-            <!-- Hộp thông báo khi click vào dots grid -->
-            <div class="dots-notification-box" id="dotsNotificationBox">
-                <div class="notification-content">
-                    <p>Chờ phiên bản blog 4.8.8 sắp ra mắt.</p>
-                    <button class="back-btn" id="backToMainBtn">Trở lại</button>
+            <button class="new-post-btn">
+                <i class="fas fa-plus"></i> BÀI ĐĂNG MỚI
+                <i class="fas fa-caret-down"></i>
+            </button>
+            <div class="divider"></div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item">
+                    <i class="fas fa-file-alt"></i> Bài đăng
+                </a>
+                <a href="#" class="nav-item" id="statsToggle">
+                    <i class="fas fa-chart-bar"></i> Thống kê
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-comments"></i> Nhận xét
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-dollar-sign"></i> Thu nhập
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-file"></i> Trang
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-paint-brush"></i> Chủ đề
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-cog"></i> Cài đặt
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-book"></i> Danh sách đọc
+                </a>
+            </nav>                
+        </div>
+
+        <!-- Main Content -->
+        <div id="mainContent">
+            <!-- Phần 1: Thống kê nhanh -->
+            <div class="quick-stats">
+                <div class="stat-item border-right">
+                    <i class="fas fa-user"></i> 
+                    <span>0 người theo dõi</span>
+                </div>
+                <div class="stat-item border-right">
+                    <i class="fas fa-file-alt"></i> 
+                    <span>0 bài đăng</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-comments"></i> 
+                    <span>0 nhận xét</span>
                 </div>
             </div>
 
-            <!-- Hộp trợ giúp -->
-            <div class="help-box" id="helpBox">
-                <div class="help-item">Trợ giúp</div>
-                <div class="help-item">Gửi phản hồi</div>
+            <!-- Phần 2: Không có số liệu thống kê lượt xem -->
+            <div class="no-data-card">
+                <img src="/img/dp.jpg" class="no-data-img" alt="Không có dữ liệu">
+                <p class="no-data-title">Không có số liệu thống kê nào về lượt xem blog.</p>
+                <p class="no-data-text">Hãy kiểm tra lại vào lúc khác để biết thông tin mới.</p>
             </div>
-            
-            <!-- Avatar người dùng -->
-            <div class="avatar">
-                <span>H</span>
-            </div>
-        </div>
-    </div>
 
-    <!-- Main Content -->
-    <div class="main-container">
-        <!-- Phần 1: Thống kê nhanh -->
-        <div class="quick-stats">
-            <div class="stat-item border-right">
-                <i class="fas fa-user"></i> 
-                <a href="https://www.google.com.vn/?hl=vi" target="_blank" style="color: #25a9e0; text-decoration: none;" >0 người theo dõi</a>
-            </div>
-            <div class="stat-item border-right">
-                <i class="fas fa-file-alt"></i> 
-                <a href="https://coccoc.com/" target="_blank" style="color: #25a9e0; text-decoration: none;" >0 bài đăng</a>
-            </div>
-            <div class="stat-item">
-                <i class="fas fa-comments"></i> 
-                <a href="https://www.instagram.com/" target="_blank" style="color: #25a9e0; text-decoration: none;" >0 nhận xét</a>
-            </div>
-        </div>
-
-        <div class="no-data-card">
-            <h3 class="card-title">Bài Đăng Mới Nhất</h3>
-            <img src="img/dp.jpg" class="no-data-img" alt="Không có dữ liệu">
-            <p class="no-data-title">Không có số liệu thống kê nào về lượt xem blog.</p>
-            <p class="no-data-text">Hãy kiểm tra lại vào lúc khác để biết thông tin mới.</p>
-        </div>
-
-        <div class="no-data-card">
-            <h3 class="card-title">Nhận Xét</h3>
-            <img src="img/dp.jpg" class="no-data-img" alt="Không có dữ liệu">
-            <p class="no-data-title">Không có dữ liệu nào để hiển thị.</p>
-            <p class="no-data-text">Hãy thử lại sau hoặc chọn khoảng thời gian khác.</p>
-        </div>
-
-        <div class="no-data-card">
-            <h3 class="card-title">Bài Đăng</h3>
-            <img src="img/dp.jpg" class="no-data-img" alt="Không có dữ liệu">
-            <p class="no-data-title">Không có dữ liệu nào để hiển thị.</p>
-            <p class="no-data-text">Hãy thử lại sau hoặc chọn khoảng thời gian khác.</p>
-        </div>
-
-        <div class="no-data-card">
-            <h3 class="card-title">Trang</h3>
-            <img src="img/dp.jpg" class="no-data-img" alt="Không có dữ liệu">
-            <p class="no-data-title">Không có dữ liệu nào để hiển thị.</p>
-            <p class="no-data-text">Hãy thử lại sau hoặc chọn khoảng thời gian khác.</p>
-        </div>
-
-        <!-- Footer -->
-        <div class="footer-text">
-            Quản lý theo dõi lượt xem trang của riêng bạn
-        </div>
-
-    </div>
-
-    <!-- Modal thay đổi Avatar -->
-    <div class="modal-overlay" id="avatarModal">
-        <div class="modal-content small-modal">
-            <span class="close-modal">&times;</span>
-            <div class="modal-title">Chuyển đổi tài khoản</div>
-            <input type="text" class="modal-input" id="avatarInput" placeholder="Nhập tên tài khoản">
-            <div class="error-message" id="avatarError">Vui lòng nhập tên tài khoản mới!</div>
-            <div class="divider-blue"></div>
-            <div class="modal-actions">
-                <button class="modal-btn modal-btn-cancel" id="cancelAvatarBtn">HỦY</button>
-                <button class="modal-btn modal-btn-save" id="saveAvatarBtn">LƯU</button>
+            <!-- Phần 3: Không có dữ liệu tổng quát -->
+            <div class="no-data-card">
+                <img src="/img/dp.jpg" class="no-data-img" alt="Không có dữ liệu">
+                <p class="no-data-title">Không có dữ liệu nào để hiển thị.</p>
+                <p class="no-data-text">Hãy thử lại sau hoặc chọn khoảng thời gian khác.</p>
             </div>
         </div>
     </div>
 
-    <script src="Blog.js"></script>
+    <script src="/js/Setting+Statistical.js"></script>
 </body>
 </html>

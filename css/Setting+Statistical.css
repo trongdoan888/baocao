@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #f3f4f6;
     min-height: 100vh;
     display: flex;
@@ -17,52 +17,92 @@ body {
 }
 
 /* Style cho phần Header */
-.header {
-    background: white;
+
+.container {
+    width: 90%;
+    max-width: 100%;
+    margin: 0 auto;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 16px;
-    border-bottom: 1px solid #e5e7eb;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.header-left {
-    display: flex;
     align-items: center;
 }
 
-.header-icons {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-}
-
-/* Style cho grid dots (9 chấm) */
-.dots-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4px;
-    font-size: 8px;
-}
-
-/* Style cho avatar người dùng */
-.avatar {
-    width: 56px;
-    height: 56px;
-    background-color: #d1d5db;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Header */
+.header {
+    background: linear-gradient(to right, #2c3e50, #4b4b4b);
     color: white;
-    font-size: 24px;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.avatar span {
+.logo {
+    font-size: 24px;
     font-weight: bold;
 }
 
+
+/* Nút mở menu */
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Side menu */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: #8998a7;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: left 0.3s ease-in-out;
+    z-index: 2000;
+}
+
+.side-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.side-menu a:hover {
+    background: #2c3e50;
+    border-radius: 5px;
+}
+
+/* Nút đóng menu */
+.close-menu {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+/* Khi menu mở */
+.side-menu.open {
+    left: 0;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: hidden;
+}
 /* =======
    CÀI ĐẶT
    ======= */
@@ -715,3 +755,5 @@ body {
     width: 100%;
     text-decoration: underline;
 }
+
+

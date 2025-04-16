@@ -2,21 +2,28 @@
 <html>
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="container header-container">
-      <div class="logo">BLOGGER</div>
-      <nav class="nav">
-        <a href="#home">Trang Chủ</a>
-        <a href="#about">Giới Thiệu</a>
-        <a href="#login">Đăng Nhập</a>
-        <a href="#contact">Liên Hệ</a>
-      </nav>
-    </div>
+    <!-- Header -->
+    <header class="header">
+      <div class="container1">
+          <div class="logo">BLOGGER</div>
+          <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+      </div>
   </header>
+
+  <!-- Menu Ẩn -->
+  <nav class="side-menu">
+      <button class="close-menu"><i class="fas fa-times"></i></button>
+      <a href="main.html"><i class="fas fa-home"></i> Trang Chủ</a>
+      <a href="profile.html"><i class="fas fa-user"></i> Trang Cá Nhân</a>
+      <a href="Statistical.html"><i class="fas fa-chart-bar"></i> Thống Kê</a>
+      <a href="layout.html"><i class="fas fa-th-large"></i> Bố Cục</a>
+      <a href="theme.html"><i class="fas fa-paint-brush"></i> Chủ Đề</a>
+      <a href="Setting.html"><i class="fas fa-cog"></i> Cài Đặt</a>
+  </nav>
 
   <!-- Container -->
   <div class="container">
@@ -72,6 +79,6 @@
     <button onclick="applyBackground()">ÁP DỤNG</button>
   </div>
 
-  <script src="theme.js"></script>
+  <script src="/js/theme.js"></script>
 </body>
 </html>

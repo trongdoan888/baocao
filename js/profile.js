@@ -1,4 +1,4 @@
-// Initialize year selects
+// Khởi tạo các select năm
 function initializeYearSelects() {
     const currentYear = new Date().getFullYear();
     const yearSelects = [
@@ -18,7 +18,7 @@ function initializeYearSelects() {
     });
 }
 
-// Edit Options Modal
+// Modal chỉnh sửa thông tin
 const editOptionsModal = document.getElementById('editOptionsModal');
 const editProfileBtn = document.querySelector('.profile-actions button.edit');
 const editIntroBtn = document.querySelector('.edit-intro');
@@ -36,7 +36,7 @@ closeEditOptionsModal.addEventListener('click', () => {
     editOptionsModal.style.display = 'none';
 });
 
-// Link options to their modals
+// Liên kết các lựa chọn với modals
 document.querySelectorAll('.edit-option').forEach(option => {
     option.addEventListener('click', () => {
         const modalId = option.getAttribute('data-modal');
@@ -48,7 +48,7 @@ document.querySelectorAll('.edit-option').forEach(option => {
     });
 });
 
-// City Modal
+// Modal Thành phố
 const cityModal = document.getElementById('cityModal');
 const closeCityModal = document.getElementById('closeCityModal');
 const cancelCityModal = document.getElementById('cancelCityModal');
@@ -66,7 +66,7 @@ saveCityBtn.addEventListener('click', () => {
     cityModal.style.display = 'none';
 });
 
-// Hometown Modal
+// Modal Quê quán
 const hometownModal = document.getElementById('hometownModal');
 const closeHometownModal = document.getElementById('closeHometownModal');
 const cancelHometownModal = document.getElementById('cancelHometownModal');
@@ -84,7 +84,7 @@ saveHometownBtn.addEventListener('click', () => {
     hometownModal.style.display = 'none';
 });
 
-// Work Modal
+// Modal Công việc
 const workModal = document.getElementById('workModal');
 const closeWorkModal = document.getElementById('closeWorkModal');
 const cancelWorkModal = document.getElementById('cancelWorkModal');
@@ -108,7 +108,7 @@ saveWorkBtn.addEventListener('click', () => {
     document.getElementById('workForm').reset();
 });
 
-// High School Modal
+// Modal Trung học
 const highSchoolModal = document.getElementById('highSchoolModal');
 const closeHighSchoolModal = document.getElementById('closeHighSchoolModal');
 const cancelHighSchoolModal = document.getElementById('cancelHighSchoolModal');
@@ -131,7 +131,7 @@ saveHighSchoolBtn.addEventListener('click', () => {
     document.getElementById('highSchoolForm').reset();
 });
 
-// College Modal
+// Modal Đại học
 const collegeModal = document.getElementById('collegeModal');
 const closeCollegeModal = document.getElementById('closeCollegeModal');
 const cancelCollegeModal = document.getElementById('cancelCollegeModal');
@@ -154,7 +154,7 @@ saveCollegeBtn.addEventListener('click', () => {
     document.getElementById('collegeForm').reset();
 });
 
-// Relationship Modal
+// Modal Tình trạng quan hệ
 const relationshipModal = document.getElementById('relationshipModal');
 const closeRelationshipModal = document.getElementById('closeRelationshipModal');
 const cancelRelationshipModal = document.getElementById('cancelRelationshipModal');
@@ -173,7 +173,7 @@ saveRelationshipBtn.addEventListener('click', () => {
     relationshipModal.style.display = 'none';
 });
 
-// Phone Modal
+// Modal Số điện thoại
 const phoneModal = document.getElementById('phoneModal');
 const closePhoneModal = document.getElementById('closePhoneModal');
 const cancelPhoneModal = document.getElementById('cancelPhoneModal');
@@ -185,7 +185,7 @@ closePhoneModal.addEventListener('click', () => phoneModal.style.display = 'none
 cancelPhoneModal.addEventListener('click', () => phoneModal.style.display = 'none');
 
 phoneInput.addEventListener('input', (e) => {
-    e.target.value = e.target.value.replace(/\D/g, '');
+    e.target.value = e.target.value.replace(/\D/g, ''); // Chỉ giữ lại số
 });
 
 savePhoneBtn.addEventListener('click', () => {
@@ -206,7 +206,7 @@ savePhoneBtn.addEventListener('click', () => {
     phoneError.style.display = 'none';
 });
 
-// Close modal when clicking outside
+// Đóng modal khi click ra ngoài
 window.addEventListener('click', (e) => {
     if (e.target.classList.contains('modal')) {
         document.querySelectorAll('.modal').forEach(modal => {
@@ -215,5 +215,28 @@ window.addEventListener('click', (e) => {
     }
 });
 
-// Initialize
+// Khởi tạo các năm cho các trường select
 initializeYearSelects();
+
+// Lấy phần tử cần sử dụng
+const menuToggle = document.querySelector(".menu-toggle");
+const sideMenu = document.querySelector(".side-menu");
+const closeMenu = document.querySelector(".close-menu");
+
+// Khi ấn vào nút 3 gạch
+menuToggle.addEventListener("click", (event) => {
+    sideMenu.classList.add("open");  // Thêm lớp 'open' cho menu
+    event.stopPropagation(); // Ngăn chặn sự kiện click lan ra ngoài
+});
+
+// Khi ấn vào nút đóng (×)
+closeMenu.addEventListener("click", () => {
+    sideMenu.classList.remove("open");  // Loại bỏ lớp 'open' để ẩn menu
+});
+
+// Khi click ra ngoài menu
+document.addEventListener("click", (event) => {
+    if (!sideMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+        sideMenu.classList.remove("open");  // Đóng menu nếu click ra ngoài
+    }
+});

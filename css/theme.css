@@ -1,71 +1,106 @@
-/* CSS cho header */
+/* Reset chung */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Container chung */
+.container1 {
+  width: 90%;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Header */
 .header {
-    background: linear-gradient(to right, #2c3e50, #4b4b4b);
-    padding: 1rem 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  
-  .header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  .logo {
-    font-size: 40px;
-    font-weight: bold;
-    color: white;
-  }
-  
-  .nav {
-    display: flex;
-    gap: 20px;
-    justify-content: flex-end;
-  }
-  
-  .nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s, border-bottom 0.3s;
-    margin: 0 10px;
-    position: relative;
-  }
-  
-  .nav a::after {
-    content: "";
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #ffdd57;
-    transition: width 0.3s;
-  }
-  
-  .nav a:hover {
-    color: #ffdd57;
-  }
-  
-  .nav a:hover::after {
-    width: 100%;
-  }
-  
-  @media (max-width: 768px) {
-    .header-container {
-      flex-direction: column;
-    }
-    .nav a {
-      margin: 0.5rem 0;
-    }
-  }
+  background: linear-gradient(to right, #2c3e50, #4b4b4b);
+  color: white;
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.search {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  border-radius: 8px;
+  height: 30px;
+  width: 50%;
+  background-color: #ffffff;
+  padding-left: 20px;
+  border: 1px solid #ccc;
+}
+
+/* Nút mở menu */
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Side menu */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background: #8998a7;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: left 0.3s ease-in-out;
+  z-index: 2000;
+}
+
+.side-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 10px;
+  transition: background 0.3s;
+}
+
+.side-menu a:hover {
+  background: #2c3e50;
+  border-radius: 5px;
+}
+
+/* Nút đóng menu */
+.close-menu {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+/* Khi menu mở */
+.side-menu.open {
+  left: 0;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: hidden;
+}
   
   /* CSS cơ bản cho giao diện Contempo Light */
   body {
