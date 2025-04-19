@@ -3,22 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Đăng Bài Mới</title>
     <link rel="stylesheet" href="/css/postpass.css">
 </head>
 <body>
-    <!-- Header với thanh điều hướng  -->
-     <header class="header">
-        <div class="container ">
-            <div class="logo">
-                <button class="logo-back" onclick="window.location.href='post.html'"> &#8592;</button>
-                <div  class="logo-name">BLOGGER</div>
+    <div  class="back">
+        <button onclick="window.location.href='post.html'">&lAarr;</button>
+      </div>
+    <div class="container">
+        <h2>Đăng Bài Mới</h2>
+        <form>
+            <label for="title">Nhập tiêu đề bài viết của bạn...</label>
+            <input type="text" id="title" required>
+
+            <label for="summary">Nhập mô tả ngắn về bài viết...</label>
+            <textarea id="summary" required></textarea>
+
+            <label for="content">Nhập nội dung bài viết của bạn...</label>
+            <textarea id="content" required></textarea>
+
+            <div class="image-upload">
+                <label>Thêm Hình Ảnh:</label>
+                <input type="file" accept="image/*">
             </div>
-            <div class="nav">
-                <a href="">Trợ Giúp</a> 
-                <a href="">Phản Hồi</a>
-            </div>
-        </div>
-     </header>
+
+            <label for="category">Chọn danh mục:</label>
+            <select id="category">
+                <option value="">Chọn danh mục</option>
+                <option value="cat1">Danh mục 1</option>
+                <option value="cat2">Danh mục 2</option>
+            </select>
+
+            <button type="button" class="add">Thêm</button>
+
+            <label for="privacy">Độ riêng tư:</label>
+            <select id="privacy">
+                <option value="public">Công khai</option>
+                <option value="private">Riêng tư</option>
+            </select>
+
+            <button type="submit" class="submit">Đăng Bài</button>
+            <button type="button" class="save">Lưu Nháp</button>
+        </form>
+        <footer>
+            <p>© 2023 Giao Diện Đăng Bài Sáng Tạo</p>
+        </footer>
+    </div>
+
+
+    <script>
+        document.querySelector('.save').addEventListener('click', function() {
+            // Lấy dữ liệu từ form
+            const draft = {
+                title: document.getElementById('title').value,
+                summary: document.getElementById('summary').value,
+                content: document.getElementById('content').value,
+                category: document.getElementById('category').value,
+                privacy: document.getElementById('privacy').value
+            };
+    
+            // Lưu vào localStorage
+            localStorage.setItem('postDraft', JSON.stringify(draft));
+    
+            // Chuyển về trang main.html
+            window.location.href = 'post.html';
+        });
+    </script>
 </body>
-</html>\
+</html>

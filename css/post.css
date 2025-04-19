@@ -65,6 +65,7 @@
     flex-direction: column;
     gap: 15px;
     transition: left 0.3s ease-in-out;
+    z-index: 999;
 }
 
 .side-menu a {
@@ -101,17 +102,16 @@
     visibility: hidden;
 }
 
-/* Phần không có bài đăng */
+/* Nội dung chính */
 .main-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
+    padding-top: 120px; /* tránh đè header */
+    padding-bottom: 100px;
     background: #f9f9f9;
-    padding-top: 60px;
+    min-height: 100vh;
+    text-align: center;
 }
 
+/* Khi không có bài đăng */
 .empty-post-container {
     background: #fff;
     padding: 30px;
@@ -119,6 +119,7 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     max-width: 500px;
     width: 100%;
+    margin: 0 auto;
 }
 
 .empty-icon {
@@ -143,6 +144,7 @@ p {
 .add-post-btn {
     position: fixed;
     right: 10%;
+    bottom: 8%;
     display: flex;
     background: #ff5722;
     color: white;
@@ -152,7 +154,7 @@ p {
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    bottom: 8%;
+    transition: all 0.3s ease;
 }
 
 .add-post-btn:hover {
@@ -160,3 +162,51 @@ p {
     transform: scale(1.1);
 }
 
+/* Giao diện bài đăng nháp */
+#draft-post {
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+.draft-post {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.draft-post h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.draft-post p {
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.draft-post button {
+    padding: 8px 16px;
+    margin-right: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.draft-post button:hover {
+    background-color: #0056b3;
+}
+
+.draft-post button:last-child {
+    background-color: #dc3545;
+}
+
+.draft-post button:last-child:hover {
+    background-color: #c82333;
+}

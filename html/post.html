@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Trang Chính</title>
     <link rel="stylesheet" href="/css/post.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
@@ -28,20 +28,26 @@
         <a href="theme.html"><i class="fas fa-paint-brush"></i> Chủ Đề</a>
         <a href="Setting.html"><i class="fas fa-cog"></i> Cài Đặt</a>
     </nav>
-    
 
     <!-- Nội dung chính -->
     <main class="main-content">
-        <div class="empty-post-container">
-            <i class="fas fa-pencil-alt empty-icon" ></i>
+        <!-- THÔNG BÁO KHI KHÔNG CÓ BÀI ĐĂNG -->
+        <div class="empty-post-container" id="empty-message">
+            <i class="fas fa-pencil-alt empty-icon"></i>
             <h2>Không có bài đăng nào</h2>
             <p>Các bài đăng bạn tạo sẽ xuất hiện ở đây</p>
         </div>
 
-        <button class="add-post-btn"><i class="fas fa-plus" onclick="window.location.href='postpass.html'"></i></button>
+        <!-- NƠI HIỂN THỊ BÀI VIẾT NHÁP -->
+        <div id="draft-post"></div>
+
+        <!-- NÚT THÊM BÀI VIẾT -->
+        <button class="add-post-btn" onclick="window.location.href='postpass.html'">
+            <i class="fas fa-plus"></i>
+        </button>
     </main>
-    
-    <!-- JavaScript -->
+
     <script src="/js/post.js"></script>
+
 </body>
 </html>
